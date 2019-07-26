@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC
+    username: root
+    password: aaaa
+    type: com.alibaba.druid.pool.DruidDataSource
+mybatis:
+  mapper-locations: classpath:Mapper/*.xml
+  type-aliases-package: com.example.springbootshiro.domain.User
+##别名扫描
+#mybatis:
+#  #实体类所做包
+#  #  type-aliases-package: com.dreamworks.sms.teacher.dto
+#  #mapper.xml所在位置
+#  mapper-locations: classpath:sqlmap/sms/*.xml
+#
+#
+#
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    lazy-loading-enabled: true
+#    aggressive-lazy-loading: false
+#spring:
+#  #数据源配置
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/student_manager_system
+#    username: root
+#    password: aaaa
+#    driver-class-name: com.mysql.jdbc.Driver
+
+#    type: com.alibaba.druid.pool.DruidDataSource

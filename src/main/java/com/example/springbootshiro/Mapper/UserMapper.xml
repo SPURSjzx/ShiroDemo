@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+        <!DOCTYPE mapper
+                PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+                "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootshiro.Mapper.UserMapper">
+<!--public User findByName(String name);-->
+<select id="findByName" parameterType="string" resultType="com.example.springbootshiro.domain.User">
+      select id, name, password
+       from user
+       where name =#{na me}
+    </select>
+
+<select id="findById" parameterType="integer" resultType="com.example.springbootshiro.domain.User">
+    select id,name,password,perms
+    from user
+    where id=#{id}
+</select>
+</mapper>
